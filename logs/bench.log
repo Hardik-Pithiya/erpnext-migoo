@@ -1,0 +1,57 @@
+2022-09-12 15:12:43,281 DEBUG cd /home/hardik/miggo-2 && /usr/bin/virtualenv --quiet env -p python3
+2022-09-12 15:12:43,672 DEBUG cd /home/hardik/miggo-2 && /home/hardik/miggo-2/env/bin/python -m pip install --quiet --upgrade pip
+2022-09-12 15:12:55,940 LOG Getting frappe
+2022-09-12 15:12:55,940 DEBUG cd miggo-2/apps && git clone https://github.com/frappe/frappe.git --branch version-14 --depth 1 --origin upstream
+2022-09-12 15:13:00,441 LOG Installing frappe
+2022-09-12 15:13:00,441 DEBUG cd /home/hardik/miggo-2 && /home/hardik/miggo-2/env/bin/python -m pip install --quiet --upgrade -e /home/hardik/miggo-2/apps/frappe 
+2022-09-12 15:13:25,910 DEBUG cd /home/hardik/miggo-2/apps/frappe && yarn install
+2022-09-12 15:13:29,313 DEBUG cd miggo-2 && bench build
+2022-09-12 15:13:29,420 INFO /usr/local/bin/bench build
+2022-09-12 15:13:46,056 LOG setting up backups
+2022-09-12 15:13:46,073 LOG backups were set up
+2022-09-12 15:13:46,073 INFO Bench miggo-2 initialized
+2022-09-12 15:14:43,628 INFO /usr/local/bin/bench new-site migoo.in
+2022-09-12 15:16:21,089 INFO /usr/local/bin/bench use migoo.in
+2022-09-12 15:16:27,539 INFO /usr/local/bin/bench get-app payments
+2022-09-12 15:16:31,507 LOG Getting payments
+2022-09-12 15:16:31,507 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2022-09-12 15:16:36,309 LOG Installing payments
+2022-09-12 15:16:36,309 DEBUG cd /home/hardik/miggo-2 && /home/hardik/miggo-2/env/bin/python -m pip install --quiet --upgrade -e /home/hardik/miggo-2/apps/payments 
+2022-09-12 15:16:38,229 DEBUG bench build --app payments
+2022-09-12 15:16:38,351 INFO /usr/local/bin/bench build --app payments
+2022-09-12 15:16:46,020 INFO /usr/local/bin/bench get-app erpnext --branch version-14
+2022-09-12 15:16:49,956 LOG Getting erpnext
+2022-09-12 15:16:49,956 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-14 --depth 1 --origin upstream
+2022-09-12 15:16:58,807 LOG Installing erpnext
+2022-09-12 15:16:58,807 DEBUG cd /home/hardik/miggo-2 && /home/hardik/miggo-2/env/bin/python -m pip install --quiet --upgrade -e /home/hardik/miggo-2/apps/erpnext 
+2022-09-12 15:17:03,043 DEBUG cd /home/hardik/miggo-2/apps/erpnext && yarn install
+2022-09-12 15:17:03,506 DEBUG bench build --app erpnext
+2022-09-12 15:17:03,640 INFO /usr/local/bin/bench build --app erpnext
+2022-09-12 15:18:02,706 INFO /usr/local/bin/bench --site migoo.in install-app erpnext
+2022-09-12 15:19:38,145 INFO /usr/local/bin/bench get-app hrms
+2022-09-12 15:19:42,064 LOG Getting hrms
+2022-09-12 15:19:42,065 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2022-09-12 15:19:47,414 LOG Installing hrms
+2022-09-12 15:19:47,414 DEBUG cd /home/hardik/miggo-2 && /home/hardik/miggo-2/env/bin/python -m pip install --quiet --upgrade -e /home/hardik/miggo-2/apps/hrms 
+2022-09-12 15:19:49,154 DEBUG bench build --app hrms
+2022-09-12 15:19:49,265 INFO /usr/local/bin/bench build --app hrms
+2022-09-12 15:20:14,499 INFO /usr/local/bin/bench --site sitename install-app hrms
+2022-09-12 15:20:26,227 INFO /usr/local/bin/bench --site migoo.in install-app hrms
+2022-09-12 15:20:58,921 INFO /usr/local/bin/bench set-config developer_mode 1
+2022-09-12 15:21:20,425 INFO /usr/local/bin/bench new-app migoo
+2022-09-12 15:21:20,676 LOG creating new app migoo
+2022-09-12 15:21:53,996 LOG Installing migoo
+2022-09-12 15:21:53,997 DEBUG cd /home/hardik/miggo-2 && /home/hardik/miggo-2/env/bin/python -m pip install --quiet --upgrade -e /home/hardik/miggo-2/apps/migoo 
+2022-09-12 15:21:55,093 DEBUG bench build --app migoo
+2022-09-12 15:21:55,203 INFO /usr/local/bin/bench build --app migoo
+2022-09-12 15:22:31,512 INFO /usr/local/bin/bench migoo.in install-app migoo
+2022-09-12 15:23:11,088 INFO /usr/local/bin/bench --site migoo.in install-app migoo
+2022-09-12 15:23:33,257 INFO /usr/local/bin/bench stert
+2022-09-12 15:23:33,505 WARNING /usr/local/bin/bench stert executed with exit code 2
+2022-09-12 15:23:44,425 INFO /usr/local/bin/bench start
+2022-09-12 15:23:44,967 INFO /usr/local/bin/bench worker --queue long
+2022-09-12 15:23:45,024 INFO /usr/local/bin/bench schedule
+2022-09-12 15:23:45,027 INFO /usr/local/bin/bench serve --port 8014
+2022-09-12 15:23:45,028 INFO /usr/local/bin/bench watch
+2022-09-12 15:23:45,031 INFO /usr/local/bin/bench worker --queue short
+2022-09-12 15:23:45,038 INFO /usr/local/bin/bench worker --queue default
